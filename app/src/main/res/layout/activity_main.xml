@@ -1,56 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/mainTopView" android:background="@color/top" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:gravity="start" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_weight="1">
+            <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainPocketMoneyView" android:background="@drawable/selector_tawon_white" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="45dp">
 
-    <TextView
-        android:id="@+id/total_spend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:clickable="false"
-        android:text="@string/total_spent"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+                <TextView
+                    android:id="@+id/mainPocketMoneyTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Income"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+                <TextView android:textSize="14sp" android:textColor="#ff000000" android:ellipsize="end" android:gravity="end" android:id="@+id/mainPocketMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:text="￦ 300,000,000" android:maxLines="1" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainBalanceMoneyView" android:background="@drawable/selector_tawon_white" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="14sp" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainBalanceMoneyTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Balance"/>
+                <TextView android:textSize="14sp" android:textColor="#ff000000" android:ellipsize="end" android:gravity="end" android:id="@+id/mainBalanceMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainSavingMoneyView" android:background="@drawable/selector_tawon_white" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="14sp" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainSavingMoneyTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Saving"/>
+                <TextView android:textSize="14sp" android:textColor="#ff000000" android:ellipsize="end" android:gravity="end" android:id="@+id/mainSavingMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="258dp"
-        android:layout_height="290dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/month_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Total Spending"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/total_spend"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/bg" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:id="@+id/mainMonthPreView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/arrow_pre_pink"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/shape_tawon_white" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="5">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_topwon_gray" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textColor="@color/out" android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/mainMonthTypeTextView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="월별"/>
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@+id/mainMonthDateTextView" android:background="@drawable/selector_nemo" android:layout_width="0dp" android:layout_height="match_parent" android:text="2020. 06" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="#ff000000" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/mainToMonthTextView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="이번달"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainMonthInView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainMonthInTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly income"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/in" android:ellipsize="end" android:gravity="end" android:id="@+id/mainMonthInMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainMonthOutView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainMonthOutTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Expenditure"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/out" android:ellipsize="end" android:gravity="end" android:id="@+id/mainMonthOutMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainMonthSavingView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainMonthSavingTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Saving"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/savingIn" android:ellipsize="end" android:gravity="end" android:id="@+id/mainMonthSavingMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainMonthBalanceView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainMonthBalanceTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Balance"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/balance" android:ellipsize="end" android:gravity="end" android:id="@+id/mainMonthBalanceMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/mainMonthNextView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/arrow_next_pink"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="10dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:id="@+id/mainDayPreView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/arrow_pre_pink"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/shape_tawon_white" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="5">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_topwon_gray" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textColor="@color/out" android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/mainDayTypeTextView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Daily"/>
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@+id/mainDayDateTextView" android:background="@drawable/selector_nemo" android:layout_width="0dp" android:layout_height="match_parent" android:text="2020. 06. 21 (화)" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="#ff000000" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/mainToDayTextView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Today"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainDayInView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainDayInTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily income"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/in" android:ellipsize="end" android:gravity="end" android:id="@+id/mainDayInMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainDayOutView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainDayOutTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Expenditure"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/out" android:ellipsize="end" android:gravity="end" android:id="@+id/mainDayOutMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainDaySavingView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainDaySavingTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Saving"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/savingIn" android:ellipsize="end" android:gravity="end" android:id="@+id/mainDaySavingMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/mainDayBalanceView" android:background="@drawable/selector_nemo" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ff000000" android:gravity="start" android:id="@+id/mainDayBalanceTitleTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Daily Balance"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/balance" android:ellipsize="end" android:gravity="end" android:id="@+id/mainDayBalanceMoneyTextView" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="￦ 300,000" android:maxLines="1" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:id="@+id/mainDayNextView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+                <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/arrow_next_pink"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/mainBottomView" android:background="@color/app" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainInsertView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_insert"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Insert"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainListView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_list"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Summary"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainCalendarView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_calendar"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Calendar"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainMemoView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_memo"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Memo"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainStatsView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_stats"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Statistic"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainPurposeView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_purpose"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Goal"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/mainSettingView" android:background="@drawable/selector_nemo" android:padding="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_setting"/>
+            <TextView android:textSize="12sp" android:textColor="@color/black" android:id="@+id/mainTextView7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Settings"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/autoInsertTitleView" android:background="@color/top" android:layout_width="match_parent" android:layout_height="50dp">
+        <LinearLayout android:id="@+id/autoInsertBackView" android:background="@drawable/selector_nemo" android:padding="10dp" android:layout_width="40dp" android:layout_height="40dp">
+            <TextView android:background="@drawable/arrow_pre_mint" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <TextView android:textSize="18sp" android:textColor="@color/white" android:gravity="start" android:id="@+id/autoInsertTitleTextView" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Insert" android:layout_weight="1"/>
+        <TextView android:textSize="14sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/autoInsertTipTextView" android:background="@drawable/selector_tawon_app" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="Help"/>
+    </LinearLayout>
+    <ScrollView android:background="@color/bg" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/autoInsertOutRadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:text="Expenditure"
+                    android:textColor="@color/out"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <RadioButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/in" android:id="@+id/autoInsertInRadioButton" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Income" android:layout_weight="1"/>
+                <RadioButton android:textSize="16sp" android:textStyle="bold" android:textColor="@color/savingIn" android:id="@+id/autoInsertSavingRadioButton" android:clickable="true" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Saving" android:layout_weight="1"/>
+            </RadioGroup>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/autoInsertStartDateView" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginBottom="10dp">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/autoInsertTextView1" android:padding="4dp" android:layout_width="100dp" android:layout_height="wrap_content" android:text="Date"/>
+
+                <TextView
+                    android:id="@+id/autoInsertStartDateTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_tawon_white"
+                    android:gravity="center"
+                    android:text="2020.06.19"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginBottom="10dp">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/autoInsertTextView2" android:padding="4dp" android:layout_width="100dp" android:layout_height="wrap_content" android:text="Balance"/>
+
+                <TextView
+                    android:id="@+id/autoInsertRepeatTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_tawon_white"
+                    android:gravity="right|center_vertical|center_horizontal|center|end"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="$ 0"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginBottom="10dp">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/autoInsertTextView3" android:padding="4dp" android:layout_width="100dp" android:layout_height="wrap_content" android:text="Category"/>
+                <Spinner android:textSize="16sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/InsertCategorySpinner" android:background="@drawable/selector_tawon_white" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="4dp" android:text="Category" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginBottom="10dp">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/black" android:id="@+id/autoInsertTextView4" android:padding="4dp" android:layout_width="100dp" android:layout_height="wrap_content" android:text="Amount"/>
+
+                <TextView
+                    android:id="@+id/autoInsertMoneyTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_tawon_white"
+                    android:gravity="right|center_vertical|center_horizontal|center|end"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="$ 0"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center_vertical" android:id="@+id/autoInsertTextView5" android:padding="4dp" android:layout_width="100dp" android:layout_height="45dp" android:text="Description"/>
+                <EditText android:textSize="16sp" android:textColor="@color/black" android:id="@+id/autoInsertMemoEditText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:hint="Click to type" android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내역"
+        android:layout_gravity="end"
+        android:layout_marginEnd="4sp"
+        >
+    </Button>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp">
+        <TextView android:textSize="16sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/InsertSaveTextView" android:background="@drawable/selector_tawon_app" android:layout_width="match_parent" android:layout_height="45dp" android:text="SAVE" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
